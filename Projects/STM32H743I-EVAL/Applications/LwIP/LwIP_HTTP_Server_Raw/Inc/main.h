@@ -28,11 +28,10 @@
 #include "stm32h743i_eval.h"
 #include "stm32h743i_eval_lcd.h"
 #include "stm32h743i_eval_sdram.h"
-#include "stm32_lcd.h"
 
 /* Exported types ------------------------------------------------------------*/
 /* Exported constants --------------------------------------------------------*/
-#define USE_LCD
+#define USE_LCD        /* enable LCD  */
 
 /*Static IP ADDRESS: IP_ADDR0.IP_ADDR1.IP_ADDR2.IP_ADDR3 */
 #define IP_ADDR0   ((uint8_t) 192U)
@@ -60,6 +59,7 @@
 #endif
 
 #endif /* __MAIN_H */
+
 
 
 

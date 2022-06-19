@@ -22,7 +22,7 @@
 
 #ifdef __cplusplus
  extern "C" {
-#endif 
+#endif
 
 /* Includes ------------------------------------------------------------------*/
 /* Exported types ------------------------------------------------------------*/
@@ -45,4 +45,5 @@ void SysTick_Handler(void);
 #endif
 
 #endif /* __STM32H7xx_IT_H */
+
 

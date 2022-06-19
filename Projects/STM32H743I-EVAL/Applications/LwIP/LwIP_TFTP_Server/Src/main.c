@@ -117,11 +117,6 @@ int main(void)
 
 static void BSP_Config(void)
 {
-  BSP_LED_Init(LED1);
-  BSP_LED_Init(LED2);
-  BSP_LED_Init(LED3);
-  BSP_LED_Init(LED4);
-
   BSP_SD_Init(0);
 
 #ifdef USE_LCD
@@ -297,14 +292,14 @@ static void MPU_Config(void)
   MPU_InitStruct.TypeExtField = MPU_TEX_LEVEL0;
   MPU_InitStruct.SubRegionDisable = 0x87;
   MPU_InitStruct.DisableExec = MPU_INSTRUCTION_ACCESS_DISABLE;
-
+  
   HAL_MPU_ConfigRegion(&MPU_InitStruct);
-
+  
   /* Configure the MPU attributes as Device not cacheable
      for ETH DMA descriptors */
   MPU_InitStruct.Enable = MPU_REGION_ENABLE;
-  MPU_InitStruct.BaseAddress = 0x30040000;
-  MPU_InitStruct.Size = MPU_REGION_SIZE_256B;
+  MPU_InitStruct.BaseAddress = 0x30000000;
+  MPU_InitStruct.Size = MPU_REGION_SIZE_1KB;
   MPU_InitStruct.AccessPermission = MPU_REGION_FULL_ACCESS;
   MPU_InitStruct.IsBufferable = MPU_ACCESS_BUFFERABLE;
   MPU_InitStruct.IsCacheable = MPU_ACCESS_NOT_CACHEABLE;
@@ -319,7 +314,7 @@ static void MPU_Config(void)
   /* Configure the MPU attributes as Normal Non Cacheable
      for LwIP RAM heap which contains the Tx buffers */
   MPU_InitStruct.Enable = MPU_REGION_ENABLE;
-  MPU_InitStruct.BaseAddress = 0x30044000;
+  MPU_InitStruct.BaseAddress = 0x30004000;
   MPU_InitStruct.Size = MPU_REGION_SIZE_16KB;
   MPU_InitStruct.AccessPermission = MPU_REGION_FULL_ACCESS;
   MPU_InitStruct.IsBufferable = MPU_ACCESS_NOT_BUFFERABLE;
@@ -333,10 +328,10 @@ static void MPU_Config(void)
   HAL_MPU_ConfigRegion(&MPU_InitStruct);
 
 #ifdef USE_LCD
-  /* Configure the MPU attributes as WT for SDRAM */
+  /* Configure the MPU attributes as WT for OctoSPI RAM */
   MPU_InitStruct.Enable = MPU_REGION_ENABLE;
-  MPU_InitStruct.BaseAddress = SDRAM_DEVICE_ADDR;
-  MPU_InitStruct.Size = MPU_REGION_SIZE_32MB;
+  MPU_InitStruct.BaseAddress = LCD_LAYER_0_ADDRESS;
+  MPU_InitStruct.Size = MPU_REGION_SIZE_16MB;
   MPU_InitStruct.AccessPermission = MPU_REGION_FULL_ACCESS;
   MPU_InitStruct.IsBufferable = MPU_ACCESS_NOT_BUFFERABLE;
   MPU_InitStruct.IsCacheable = MPU_ACCESS_CACHEABLE;
@@ -386,4 +381,5 @@ void assert_failed(uint8_t* file, uint32_t line)
   }
 }
 #endif
+
 

@@ -1,6 +1,6 @@
 /**
   ******************************************************************************
-  * @file    LwIP/LwIP_HTTP_Server_Raw/Src/stm32h7xx_it.c 
+  * @file    LwIP/LwIP_HTTP_Server_Raw/Src/stm32h7xx_it.c
   * @author  MCD Application Team
   * @brief   Main Interrupt Service Routines.
   ******************************************************************************
@@ -136,7 +136,7 @@ void SysTick_Handler(void)
 {
   HAL_IncTick();
 }
-  
+
 
 /******************************************************************************/
 /*                 STM32H7xx Peripherals Interrupt Handlers                   */
@@ -147,11 +147,9 @@ void SysTick_Handler(void)
 
 
 
-/**
-  * @}
-  */ 
 
 /**
   * @}
   */
+
 

@@ -71,7 +71,7 @@
 #if defined(__GNUC__)
  #define configTOTAL_HEAP_SIZE			( ( size_t ) ( 25 * 1024 ) )
 #else
- #define configTOTAL_HEAP_SIZE			( ( size_t ) ( 20 * 1024 ) )
+ #define configTOTAL_HEAP_SIZE			( ( size_t ) ( 30 * 1024 ) )
 #endif
 #define configMAX_TASK_NAME_LEN			( 16 )
 #define configUSE_TRACE_FACILITY		1
@@ -143,7 +143,7 @@ See http://www.FreeRTOS.org/RTOS-Cortex-M3-M4.html. */
 /* Normal assert() semantics without relying on the provision of an assert.h
 header file. */
 #define configASSERT( x ) if( ( x ) == 0 ) { taskDISABLE_INTERRUPTS(); for( ;; ); }	
-	
+
 /* Definitions that map the FreeRTOS port interrupt handlers to their CMSIS
 standard names. */
 #define vPortSVCHandler SVC_Handler

@@ -42,13 +42,14 @@
 void ethernet_link_status_updated(struct netif *netif);
 #if LWIP_DHCP
 void DHCP_Thread(void const * argument);
-#endif  
+#endif
 
 #ifdef __cplusplus
 }
 #endif
 
 #endif /* __APP_ETHERNET_H */
+
 
 
 

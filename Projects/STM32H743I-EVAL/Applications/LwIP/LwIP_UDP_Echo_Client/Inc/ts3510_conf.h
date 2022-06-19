@@ -1,10 +1,10 @@
 /**
- ******************************************************************************
- * @file    ts3510_conf.h
- * @author  MCD Application Team
- * @brief   This file contains specific configuration for the
- *          ts3510.c that can be modified by user.
- ******************************************************************************
+  ******************************************************************************
+  * @file    ts3510_conf.h
+  * @author  MCD Application Team
+  * @brief   This file contains specific configuration for the
+  *          ts3510.c that can be modified by user.
+  ******************************************************************************
   * @attention
   *
   * Copyright (c) 2014 STMicroelectronics.
@@ -15,7 +15,7 @@
   * If no LICENSE file comes with this software, it is provided AS-IS.
   *
   ******************************************************************************
-  */
+ */
 
 /* Define to prevent recursive inclusion -------------------------------------*/
 #ifndef TS3510_CONF_H
@@ -36,4 +36,3 @@ extern "C" {
 }
 #endif
 #endif /* TS3510_CONF_H */
-

@@ -1,12 +1,12 @@
 /**
   ******************************************************************************
-  * @file    LwIP/LwIP_TCP_Echo_Server/Src/stm32h7xx_it.c 
+  * @file    LwIP/LwIP_TCP_Echo_Server/Src/stm32h7xx_it.c
   * @author  MCD Application Team
   * @brief   Main Interrupt Service Routines.
   ******************************************************************************
   * @attention
   *
-  * Copyright (c) 2019 STMicroelectronics.
+  * Copyright (c) 2017 STMicroelectronics.
   * All rights reserved.
   *
   * This software is licensed under terms that can be found in the LICENSE file
@@ -136,7 +136,7 @@ void SysTick_Handler(void)
 {
   HAL_IncTick();
 }
-  
+
 
 /******************************************************************************/
 /*                 STM32H7xx Peripherals Interrupt Handlers                   */
@@ -145,13 +145,8 @@ void SysTick_Handler(void)
 /*  file (startup_stm32h7xx.s).                                               */
 /******************************************************************************/
 
-
-
 /**
   * @}
   */
 
-/**
-  * @}
-  */
 

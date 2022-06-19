@@ -93,7 +93,7 @@
   *        (when HSE is used as system clock source, directly or through the PLL).  
   */
 #if !defined  (HSE_VALUE) 
-#define HSE_VALUE    ((uint32_t)25000000) /*!< Value of the External oscillator in Hz */
+#define HSE_VALUE    ((uint32_t)8000000) /*!< Value of the External oscillator in Hz */
 #endif /* HSE_VALUE */
 
 #if !defined  (HSE_STARTUP_TIMEOUT)
@@ -156,11 +156,11 @@
 #define  TICK_INT_PRIORITY            ((uint32_t)0x0F) /*!< tick interrupt priority */
 #define  USE_RTOS                     0
 #define  USE_SD_TRANSCEIVER           1U               /*!< use uSD Transceiver */
-   
+
 /* ########################### Ethernet Configuration ######################### */
-#define ETH_TX_DESC_CNT         4  /* number of Ethernet Tx DMA descriptors */
-#define ETH_RX_DESC_CNT         4  /* number of Ethernet Rx DMA descriptors */
-   
+#define ETH_TX_DESC_CNT         4U  /* number of Ethernet Tx DMA descriptors */
+#define ETH_RX_DESC_CNT         4U  /* number of Ethernet Rx DMA descriptors */
+
 #define ETH_MAC_ADDR0    ((uint8_t)0x02)
 #define ETH_MAC_ADDR1    ((uint8_t)0x00)
 #define ETH_MAC_ADDR2    ((uint8_t)0x00)
@@ -427,4 +427,5 @@
 
 #endif /* __STM32H7xx_HAL_CONF_H */
  
+
 

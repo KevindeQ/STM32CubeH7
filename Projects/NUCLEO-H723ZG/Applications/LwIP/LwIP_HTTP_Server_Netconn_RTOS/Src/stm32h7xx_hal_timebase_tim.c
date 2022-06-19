@@ -9,17 +9,6 @@
   *           + Initializes the TIM peripheral generate a Period elapsed Event each 1ms
   *           + HAL_IncTick is called inside HAL_TIM_PeriodElapsedCallback ie each 1ms
   * 
- @verbatim
-  ==============================================================================
-                        ##### How to use this driver #####
-  ==============================================================================
-    [..]
-    This file must be copied to the application folder and modified as follows:
-    (#) Rename it to 'stm32h7xx_hal_timebase_tim.c'
-    (#) Add this file and the TIM HAL drivers to your project and uncomment
-       HAL_TIM_MODULE_ENABLED define in stm32h7xx_hal_conf.h
-
-  @endverbatim
   ******************************************************************************
   * @attention
   *
@@ -30,6 +19,18 @@
   * in the root directory of this software component.
   * If no LICENSE file comes with this software, it is provided AS-IS.
   *
+  ******************************************************************************
+  @verbatim
+  ==============================================================================
+                        ##### How to use this driver #####
+  ==============================================================================
+    [..]
+    This file must be copied to the application folder and modified as follows:
+    (#) Rename it to 'stm32h7xx_hal_timebase_tim.c'
+    (#) Add this file and the TIM HAL drivers to your project and uncomment
+       HAL_TIM_MODULE_ENABLED define in stm32h7xx_hal_conf.h
+
+  @endverbatim
   ******************************************************************************
   */
 
@@ -169,4 +170,5 @@ void TIM6_DAC_IRQHandler(void)
 {
   HAL_TIM_IRQHandler(&TimHandle);
 }
+
 

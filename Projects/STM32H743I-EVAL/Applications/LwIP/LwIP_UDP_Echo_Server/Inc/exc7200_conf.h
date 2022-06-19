@@ -1,10 +1,10 @@
 /**
- ******************************************************************************
- * @file    exc7200_conf_template.h
- * @author  MCD Application Team
- * @brief   This file contains specific configuration for the
- *          exc7200.c that can be modified by user.
- ******************************************************************************
+  ******************************************************************************
+  * @file    exc7200_conf_template.h
+  * @author  MCD Application Team
+  * @brief   This file contains specific configuration for the
+  *          exc7200.c that can be modified by user.
+  ******************************************************************************
   * @attention
   *
   * Copyright (c) 2015 STMicroelectronics.
@@ -15,7 +15,7 @@
   * If no LICENSE file comes with this software, it is provided AS-IS.
   *
   ******************************************************************************
-  */
+ */
 
 /* Define to prevent recursive inclusion -------------------------------------*/
 #ifndef EXC7200_CONF_H
@@ -36,4 +36,3 @@ extern "C" {
 }
 #endif
 #endif /* EXC7200_CONF_H */
-
