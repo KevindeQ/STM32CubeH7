@@ -48,7 +48,6 @@ set(SOURCES
     Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_mdma.c
     Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_mmc.c
     Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_mmc_ex.c
-    Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_msp_template.c
     Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_nand.c
     Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_nor.c
     Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_opamp.c
@@ -82,9 +81,6 @@ set(SOURCES
     Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_sram.c
     Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_swpmi.c
     Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_tim.c
-    Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_timebase_rtc_alarm_template.c
-    Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_timebase_rtc_wakeup_template.c
-    Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_timebase_tim_template.c
     Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_tim_ex.c
     Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_uart.c
     Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_uart_ex.c
@@ -134,6 +130,7 @@ target_compile_definitions(${TARGET}
     PUBLIC
         STM32H723xx
         USE_HAL_DRIVER
+        USE_FULL_LL_DRIVER
 )
 
 target_include_directories(${TARGET} 
@@ -142,4 +139,5 @@ target_include_directories(${TARGET}
         Drivers/CMSIS/Device/ST/STM32H7xx/Include
         Drivers/CMSIS/Include
         Drivers/STM32H7xx_HAL_Driver/Inc
+        ${PROJECT_SOURCE_DIR}/app
 )
